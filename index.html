@@ -39,7 +39,7 @@
               <input type="password" style="display: none;" maxlength="8" placeholder="FortiToken" name="code" id="code">
             </div>
             <div class="button-actions wide">
-              <button class="primary" type="button" name="login_button" id="login_button" onClick="console.log(document.getElementById('username').value)">
+              <button class="primary" type="button" name="login_button" id="login_button" onClick="displayResult()">
                 Login
               </button>
             </div>
@@ -74,9 +74,18 @@
           var dt = new Date();
           document.getElementById("datetime").innerHTML = dt.toLocaleString();
         </script>
+        <script>
+          function displayResult() {
+            document.getElementById("form_content").innerHTML = document.getElementById('username').value;
+          }
+        </script>
         
         
       </form>
+      
+      <div id="form_content">
+        
+      </div>
       
     </div>
   </body>
